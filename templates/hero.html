@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %}Экипировка {{ inst.hero }}{% endblock %}
+{% block content %}
+<h3>Экипировка: {{ inst.hero }}</h3>
+<div class="card mb-3">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="{{ url_for('static', filename='images/' + hero.image) }}"
+           class="img-fluid" style="object-fit:contain;max-height:300px;">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p>{{ hero.desc }}</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><strong>Mov:</strong> {{ hero.stats.mov }}</li>
+          <li class="list-inline-item"><strong>DB:</strong> {{ hero.stats.db }}</li>
+          <li class="list-inline-item"><strong>BB:</strong> {{ hero.stats.bb }}</li>
+          <li class="list-inline-item"><strong>Armor:</strong> {{ hero.stats.armor }}</li>
+          <li class="list-inline-item"><strong>Base:</strong> {{ hero.stats.base }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<form method="post">
+  {% for cat in hero.categories %}
+    <fieldset class="mb-3">
+      <legend>{{ cat.capitalize() }}</legend>
+      {% for item in equipment[cat] %}
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="{{ cat }}"
+                 value="{{ item.name }}" id="{{ cat }}-{{ loop.index }}"
+                 {% if inst.selected.get(cat) and item.name in inst.selected[cat] %}checked{% endif %}>
+          <label class="form-check-label" for="{{ cat }}-{{ loop.index }}">
+            {{ item.name }} ({{ item.cost[1] }} {{ item.cost[0] }})
+          </label>
+        </div>
+      {% endfor %}
+    </fieldset>
+  {% endfor %}
+  <button class="btn btn-success">Сохранить и вернуться</button>
+</form>
+{% endblock %}

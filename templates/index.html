@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Выбор героев</h3>
+<form method="post">
+  <div class="row">
+    {% for u in units %}
+      <div class="col-md-4 mb-3">
+        <div class="card h-100">
+          <img src="{{ url_for('static',filename='images/'+u.image) }}"
+               class="card-img-top" style="height:150px;object-fit:contain;">
+          <div class="card-body">
+            <h5>{{u.name}}</h5>
+            <p>Base cost: {{u.cost[1]}} {{u.cost[0]}}</p>
+            <label>Кол-во{% if u.limit %} (max {{u.limit}}){% endif %}</label>
+            <input type="number" name="count_{{u.id}}" value="{{counts.get(u.id,0)}}"
+                   min="0" class="form-control"
+                   {% if u.limit %} max="{{u.limit}}"{% endif %}>
+            {% if counts.get(u.id,0)>0 %}
+              <a href="{{ url_for('equip_list',unit_id=u.id) }}"
+                 class="btn btn-primary mt-2 w-100">Equip</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <button class="btn btn-success mb-4">Применить количество</button>
+</form>
+
+<h3>Ваша армия</h3>
+<ul class="list-group">
+  {% for inst in army %}
+    <li class="list-group-item d-flex justify-content-between">
+      {{ UNIT_MAP[inst.unit].name }} — {{ inst.total.ducats }} дук, {{ inst.total.glory }} славы
+    </li>
+  {% else %}
+    <li class="list-group-item">Армия пуста</li>
+  {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Экипировать {{ spec.name }}</h3>
+<ul class="list-group mb-4">
+  {% for i in to_do %}
+    <li class="list-group-item d-flex justify-content-between">
+      Экземпляр {{i}}
+      <a href="{{ url_for('equip_inst',unit_id=spec.id,idx=i) }}"
+         class="btn btn-sm btn-primary">Equip</a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="{{ url_for('index') }}" class="btn btn-secondary">Назад</a>
+{% endblock %}

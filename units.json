@@ -1,0 +1,143 @@
+{
+  "warProphet": {
+    "name": "Пророк войны",
+    "max_count": 1,
+    "cost": { "value": 80, "currency": "дукатов" },
+    "stats": { "mov": "6\"", "db": "+2D", "bb": "+2D", "armor": 0, "base": "32 мм" },
+    "allowedEquipment": "всё из списка Траншейных Паломинов",
+    "abilities": [
+      { "name": "Громкоговорители", "text": "Раз в активацию Пророк может выполнить Рискованное действие с +2 кубика. При успехе все друж. модели в пределах 8\" (не в ближ. бою) немедленно могут переместиться до 3\" к любой видимой враж. модели и считаются сделавшими рывок." },
+      { "name": "Memento Mori",      "text": "Один раз за битву при выводе из строя событие игнорируется — Пророк остаётся в бою." },
+      { "name": "Возложение рук",    "text": "Действие: удалить D3 маркера крови с любой друж. модели в пределах 6\" (вкл. самого Пророка)." }
+    ],
+    "keywords": ["ELITE", "PILGRIM"]
+  },
+  "castigator": {
+    "name": "Каратель",
+    "max_count": 2,
+    "cost": { "value": 50, "currency": "дукатов" },
+    "stats": { "mov": "6\"", "db": "+1D", "bb": "+1D", "armor": 0, "base": "32 мм" },
+    "allowedEquipment": "всё из списка Пал. Траншейников",
+    "abilities": [
+      { "name": "Enforced Orthodoxy", "text": "В любой момент активации Каратель может выполнить Рискованное действие с +1 кубиком. При успехе все друж. сбитые «Down» модели в пределах 8\" немедленно встают без штрафов." },
+      { "name": "Whip of God",        "text": "Может атаковать друж. модели в 1\" ближ. атакой без объявления рывка. За каждое добивание друж. модели создаётся кубик в пул, добавляемый к следующему броску на мораль." },
+      { "name": "Zealot Strength",     "text": "За 5 дукатов Каратель получает ключевое слово STRONG." }
+    ],
+    "keywords": ["ELITE", "PILGRIM"]
+  },
+  "communicant": {
+    "name": "Коммуникант",
+    "max_count": 1,
+    "cost": { "value": 100, "currency": "очков славы" },
+    "stats": { "mov": "6\"", "db": "-3D", "bb": "+2D", "armor": 0, "base": "40 мм" },
+    "allowedEquipment": "всё; всегда носит Крест Коммуниканта",
+    "specialEquipment": ["Крест Коммуниканта (Железный Капирот, Боевой Шлем, Противогаз)"],
+    "abilities": [
+      { "name": "STRONG",               "text": "Игнорирует штрафы от тяжёлого оружия." },
+      { "name": "Tough",                "text": "Подчиняется правилам TOUGH-существа." },
+      { "name": "Miracle of Regeneration", "text": "В начале активации может удалить 1 маркер крови с себя." },
+      { "name": "Bodyguard",            "text": "Если любой Паломник в 1\" атакован (кроме Blast), удар можно перенаправить на Коммуниканта." }
+    ],
+    "keywords": ["PILGRIM", "ELITE", "STRONG", "TOUGH"]
+  },
+  "ecclesiasticPrisoners": {
+    "name": "Церковные Узники",
+    "max_count": 4,
+    "cost": { "base": 20, "perDevice": 35, "currency": "дукатов" },
+    "stats": { "mov": "6\"", "db": null, "bb": "-1D", "armor": 0, "base": "25 мм" },
+    "equipment": ["Железный Капирот (нельзя снимать)", "Устройства Мученичества (до 4, расходуемое)"],
+    "abilityWeapon": { "name": "Устройство Мученичества", "text": "При взрыве Blast 3\" модели в 1\" бросают ранения с +1D, сам Узник бросает 4d6; если выживет — можно купить новое." },
+    "abilities": [
+      { "name": "Mad Dash", "text": "+1DICE к броску действия Charge." }
+    ],
+    "keywords": ["PILGRIM"]
+  },
+  "stigmaticNuns": {
+    "name": "Стигматизированные Монахини",
+    "max_count": 2,
+    "cost": { "value": 50, "currency": "дукатов" },
+    "stats": { "mov": "8\"", "db": "+1D", "bb": "+1D", "armor": 0, "base": "25 мм" },
+    "allowedEquipment": "ближнее любое, дальн. только Pistol, Autogun, War Cross",
+    "abilities": [
+      { "name": "Blessed Stigmata", "text": "В начале активации удаляет 1 маркер крови (не Infection) и превращает его в Blessing." },
+      { "name": "Agile",            "text": "+1DICE к Charge/Jump/Climb/Diving Charge." }
+    ],
+    "keywords": ["PILGRIM"]
+  },
+  "shrineAnchorite": {
+    "name": "Анахоретская Святыня",
+    "max_count": 1,
+    "cost": { "value": 140, "currency": "дукатов" },
+    "stats": { "mov": "6\"", "db": null, "bb": "+2D", "armor": "-3", "base": "60 мм" },
+    "equipment": ["Специальный доспех", "Боевой Шлем", "Колесо Екатерины", "Костоломная Булава"],
+    "weapons": [
+      { "name": "Catherine Wheel",   "traits": ["Risky","Heavy"], "toHit": "+3D", "damage": "3d6" },
+      { "name": "Bonebreaker Mace",  "traits": ["Risky"],           "damage": "+1DICE" }
+    ],
+    "abilities": [
+      { "name": "Tough",               "text": "Подчиняется правилам TOUGH-существа." },
+      { "name": "Fear",                "text": "Все вокруг получают эффект FEAR." },
+      { "name": "Broken on the Wheel", "text": "Перед битвой можно пожертвовать Паломника/Узника — он принимает весь урон по Анахорету, пока не погибнет." }
+    ],
+    "keywords": ["PILGRIM","FEAR","TOUGH","STRONG"]
+  },
+  "trenchPilgrim": {
+    "name": "Траншейный Паломник",
+    "max_count": 10,
+    "cost": { "value": 30, "currency": "дукатов" },
+    "stats": { "mov": "6\"", "db": 0, "bb": 0, "armor": 0, "base": "25 мм" },
+    "allowedEquipment": "всё из списка Траншейных Паломинов",
+    "abilities": [
+      { "name": "Resurrection",   "text": "При смерти можно выкупить модель за 45 дукатов как Мученика-Покаянника: BB+1D, DB 0, —1D к wound; сохраняет шрамы и улучшения, но теряет элитные." },
+      { "name": "Zealot Strength","text": "Один Паломник может получить STRONG за +5 дукатов." }
+    ],
+    "keywords": ["PILGRIM"]
+  },
+  "combatMedic": {
+    "name": "Боевой медик",
+    "max_count": 1,
+    "cost": { "value": 2, "currency": "очков славы" },
+    "stats": { "mov": "6\"", "db": "+0D", "bb": "+0D", "armor": "-1", "base": "25 мм" },
+    "equipment": ["Misericordia","Medi-kit","Противогаз","Стандартная броня"],
+    "abilities": [
+      { "name": "Finish the Fallen","text": "+1DICE к ранению против Down-моделей (кроме DEMONIC/BLACK GRAIL)." },
+      { "name": "Expert Medic",    "text": "+1DICE при использовании Medi-kit." }
+    ]
+  },
+  "witchburner": {
+    "name": "Охотник на ведьм",
+    "max_count": 1,
+    "cost": { "value": 5, "currency": "очков славы" },
+    "stats": { "mov": "6\"", "db": "+0D", "bb": "+1D", "armor": "-2", "base": "32 мм" },
+    "equipment": ["Усиленная броня","Шлем","War Gavel"],
+    "abilities": [
+      { "name": "Divine Judgement","text": "Risky: в пределах 24\" накладывает 1 Blood Marker и воспламеняет (для HERETIC/BLACK GRAIL/DEMONIC — 2)." },
+      { "name": "Ceremonial Duty", "text": "Невосприимчив к FEAR." },
+      { "name": "Dignified Conduct","text": "Не может выполнять Dash." },
+      { "name": "Gavel of Justice","text": "При попадании автоматически накладывает Divine Judgement без затрат ACTION." }
+    ]
+  },
+  "communicantATHunter": {
+    "name": "Коммун. охотник на танки",
+    "max_count": 1,
+    "cost": { "value": 5, "currency": "очков славы" },
+    "stats": { "mov": "6\"", "db": "+1D", "bb": "+1D", "armor": "-1", "base": "40 мм" },
+    "equipment": ["Anti-Materiel Rifle","Trench Club (2×)","Standard Armour","Шлем"],
+    "abilities": [
+      { "name": "Strong","text": "Игнор HEAVY-штраф." },
+      { "name": "Tough","text": "Подчиняется правилам TOUGH." },
+      { "name": "Miracle of Regeneration","text": "В начале активации удаляет 1 Blood Marker." }
+    ]
+  },
+  "mendelistAmmoMonk": {
+    "name": "Менделист-монах боеприпасов",
+    "max_count": 1,
+    "cost": { "value": 2, "currency": "очков славы" },
+    "stats": { "mov": "6\"", "db": "-1D", "bb": "-1D", "armor": 0, "base": "25 мм" },
+    "equipment": ["Противогаз","Ammunition Sacrament"],
+    "abilities": [
+      { "name": "Faithful Followers","text": "Когда союзник в 1\" активируется, можно сразу активировать монаха (1×/ход)." },
+      { "name": "The Ammunition Sacrament","text": "Risky: даёт союзнику в 1\" один из трёх бонусов дальнего боя." }
+    ]
+  }
+}

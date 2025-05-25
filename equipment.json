@@ -1,0 +1,399 @@
+{
+  "rangedWeapons": [
+    {
+      "key": "rifle",
+      "name": "Винтовка",
+      "type": "Ranged",
+      "range": "18\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 10, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "semiAutoRifle",
+      "name": "Полуавтоматическая винтовка",
+      "type": "Ranged",
+      "range": "18\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "pistol",
+      "name": "Пистолет",
+      "type": "Ranged",
+      "range": "12\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 6, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "autoPistol",
+      "name": "Автоматический пистолет",
+      "type": "Ranged",
+      "range": "12\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["ASSAULT","COMBO","BAYONET"],
+      "cost": { "value": 2, "currency": "очки славы" },
+      "limit": 2,
+      "specialRules": null
+    },
+    {
+      "key": "musket",
+      "name": "Мушкет",
+      "type": "Ranged",
+      "range": "18\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "shotgun",
+      "name": "Дробовик",
+      "type": "Ranged",
+      "range": "6\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["COMBO","SHIELD","BAYONET"],
+      "cost": { "value": 10, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "machineGun",
+      "name": "Пулемёт",
+      "type": "Ranged",
+      "range": "24\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["HEAVY"],
+      "cost": { "value": 2, "currency": "очки славы" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "sniperRifle",
+      "name": "Снайперская винтовка",
+      "type": "Ranged",
+      "range": "36\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["HEAVY"],
+      "cost": { "value": 2, "currency": "очки славы" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "flamethrower",
+      "name": "Огнемёт",
+      "type": "Ranged",
+      "range": "6\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["FIRE","HEAVY"],
+      "cost": { "value": 30, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    },
+    {
+      "key": "battleCross",
+      "name": "Боевой крест",
+      "type": "Thrown",
+      "range": "8\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["ASSAULT"],
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": "Не расходует боезапас; игнорирует штрафы дальности"
+    },
+    {
+      "key": "breechGun",
+      "name": "Ружьё-пушка",
+      "type": "Ranged",
+      "range": "18\"",
+      "toHit": "+1D",
+      "toWound": "+1D",
+      "keywords": ["HEAVY","SHRAPNEL"],
+      "cost": { "value": 20, "currency": "дукатов" },
+      "limit": 2,
+      "specialRules": "Опция перегрузки: Blast 3\" +1 Blood; завершает активацию; требует STRONG или базового контакта"
+    },
+    {
+      "key": "molotov",
+      "name": "Коктейль Молотова",
+      "type": "Grenade",
+      "range": "6\"",
+      "toHit": "-1D",
+      "toWound": "+0D",
+      "keywords": ["ASSAULT","FIRE"],
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": "Игнор штрафов укрытий/брони при критическом попадании"
+    },
+    {
+      "key": "incendiaryGrenade",
+      "name": "Зажигательная граната",
+      "type": "Grenade",
+      "range": "6\"",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["ASSAULT","FIRE"],
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": null,
+      "specialRules": null
+    }
+  ],
+  "meleeWeapons": [
+    {
+      "key": "trenchKnife",
+      "name": "Окопный нож",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 1, "currency": "дукат" },
+      "limit": null
+    },
+    {
+      "key": "bayonet",
+      "name": "Штык",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["COMBO","SHIELD"],
+      "cost": { "value": 2, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "trenchClub",
+      "name": "Траншейная дубинка",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 3, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "swordAxe",
+      "name": "Меч/топор",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 4, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "polearm",
+      "name": "Древковое оружие",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": ["COMBO","SHIELD"],
+      "cost": { "value": 7, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "greatHammer",
+      "name": "Большой молот/кувалда",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 10, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "greatSwordAxe",
+      "name": "Большой меч/топор",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 12, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "atHammer",
+      "name": "Противотанковый молот",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+1D",
+      "keywords": ["RISKY","CRITICAL"],
+      "cost": { "value": 35, "currency": "дукатов" },
+      "limit": 3
+    },
+    {
+      "key": "misericordia",
+      "name": "Милосердие",
+      "type": "Melee",
+      "toHit": "+0D",
+      "toWound": "+0D",
+      "keywords": [],
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": 1
+    }
+  ],
+  "armor": [
+    {
+      "key": "standardArmor",
+      "name": "Стандартная броня",
+      "woundModifier": "-0",
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "reinforcedArmor",
+      "name": "Усиленная броня",
+      "woundModifier": "-1",
+      "cost": { "value": 40, "currency": "дукатов" },
+      "limit": "ELITE"
+    },
+    {
+      "key": "trenchShield",
+      "name": "Окопный щит",
+      "woundModifier": "-0",
+      "cost": { "value": 10, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "holyShield",
+      "name": "Щит со святой иконой",
+      "woundModifier": "-1",
+      "cost": { "value": 2, "currency": "очки славы" },
+      "limit": "ELITE"
+    }
+  ],
+  "equipment": [
+    {
+      "key": "ironCapirote",
+      "name": "Железный капирот",
+      "effect": "Нейтрализует Blood Markers от SHRAPNEL; иммунитет к FEAR",
+      "cost": { "value": 7, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "gasMask",
+      "name": "Противогаз",
+      "effect": null,
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "blessedIcon",
+      "name": "Благословенная икона",
+      "effect": "Consumable",
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "holyRelic",
+      "name": "Святая реликвия",
+      "effect": null,
+      "cost": { "value": 2, "currency": "очки славы" },
+      "limit": "ELITE"
+    },
+    {
+      "key": "medKit",
+      "name": "Медицинский комплект",
+      "effect": null,
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "fieldAltar",
+      "name": "Полевой алтарь",
+      "effect": null,
+      "cost": { "value": 2, "currency": "очки славы" },
+      "limit": null
+    },
+    {
+      "key": "incendiaryAmmo",
+      "name": "Зажигательные боеприпасы",
+      "effect": "Consumable; Blast 1\"",
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": 1
+    },
+    {
+      "key": "shovel",
+      "name": "Лопата",
+      "effect": null,
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "brandedMark",
+      "name": "Адский клеймённый знак",
+      "effect": null,
+      "cost": { "value": 5, "currency": "дукатов" },
+      "limit": null
+    },
+    {
+      "key": "battleStandard",
+      "name": "Боевой флаг",
+      "effect": null,
+      "cost": { "value": 1, "currency": "очки славы" },
+      "limit": 1
+    },
+    {
+      "key": "instrument",
+      "name": "Музыкальный инструмент",
+      "effect": null,
+      "cost": { "value": 15, "currency": "дукатов" },
+      "limit": 1
+    },
+    {
+      "key": "climbingKit",
+      "name": "Альпинистский комплект",
+      "effect": null,
+      "cost": { "value": 3, "currency": "дукатов" },
+      "limit": 1
+    },
+    {
+      "key": "martyrTablets",
+      "name": "Таблетки мученичества",
+      "effect": "Consumable",
+      "cost": { "value": 20, "currency": "дукатов" },
+      "limit": 3
+    },
+    {
+      "key": "tortureDevice",
+      "name": "Устройство мученичества",
+      "effect": "Blast 3\"; модели в 1\" бросают ранения с +1D; сам Узник бросает 4d6 и при выживании может купить новое",
+      "cost": { "value": 35, "currency": "дукатов" },
+      "limit": 4
+    }
+  ],
+  "gunsmithMonksLimits": [
+    {
+      "weapon": "Пулемёт",
+      "cost": { "value": 50, "currency": "дукатов" },
+      "limitPerSquad": 2
+    },
+    {
+      "weapon": "Автоматическая винтовка",
+      "cost": { "value": 40, "currency": "дукатов" },
+      "limitPerSquad": 1
+    },
+    {
+      "weapon": "Пистолет-пулемёт",
+      "cost": { "value": 30, "currency": "дукатов" },
+      "limitPerSquad": 1
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Экипировка: {{ spec.name }} #{{idx}}</h3>
+<form method="post">
+  {% for cat in spec.cats %}
+    <fieldset class="mb-3">
+      <legend>{{cat.capitalize()}}</legend>
+      {% for item in equip[cat] %}
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" name="{{cat}}"
+                 value="{{item.name}}" id="{{cat}}-{{loop.index}}">
+          <label class="form-check-label" for="{{cat}}-{{loop.index}}">
+            {{ item.name }} ({{ item.cost[1] }} {{ item.cost[0] }})
+          </label>
+        </div>
+      {% endfor %}
+    </fieldset>
+  {% endfor %}
+  <button class="btn btn-success">Применить</button>
+</form>
+{% endblock %}
